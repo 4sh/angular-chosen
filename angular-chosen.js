@@ -99,7 +99,7 @@
       var displaySelectedOptions = iElm.attr('display-selected-options') !== undefined ? JSON.parse(iAttr.displaySelectedOptions) : true;
 
       iElm.chosen({
-        width: '100%',
+        width: iElm.css('width') || undefined,
         max_selected_options: maxSelection,
         disable_search_threshold: searchThreshold,
         search_contains: true,
